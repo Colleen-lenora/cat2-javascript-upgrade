@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAW MATIC - Photography website</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        
+        <header>
+            <h1>RAW MATIC</h1>
+            <p class="tagline">Capturing life in every moment.</p>
+        </header>
+
+       
+        <section class="hero">
+            <div class="photo-box">
+               <img src="images/logo.jpg" alt="ilogo" width="400" height="400">
+            </div>
+            <div class="welcome-text">
+                <h2>Welcome to<br>RAW MATIC</h2>
+              
+            </div>
+        </section>
+
+        <!-- Gallery Preview -->
+        
+
+        <!-- Booking CTA -->
+        <section class="cta">
+            <p class="book-text">To book session</p>
+            <h3>Start today to capture tomorrow</h3>
+        </section>
+
+        <!-- Pricing Plans -->
+        <section class="pricing">
+            <!-- Economy Plan -->
+            <div class="plan economy">
+                <h3>Economy</h3>
+                <ul>
+                    <li>Limited photos (upto 60,000)</li>
+                    <li>Location: Studio (at the company)</li>
+                    <li>No editing</li>
+                </ul>
+                <div class="price">
+                    <input type="radio" name="plan" id="economy" value="economy">
+                    <label for="economy">$599</label>
+                </div>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="plan premium">
+                <h3>Premium</h3>
+                <ul>
+                    <li>Unlimited photos</li>
+                    <li>Location is provided</li>
+                    <li>Editing is provided</li>
+                </ul>
+                <div class="price">
+                    <input type="radio" name="plan" id="premium" value="premium">
+                    <label for="premium">$1199</label>
+                </div>
+            </div>
+
+            <!-- Diamond Plan -->
+            <div class="plan diamond">
+                <h3>Diamond</h3>
+                <ul>
+                    <li>Unlimited photos</li>
+                    <li>Location is not provided</li>
+                    <li>Editing is provided</li>
+                </ul>
+                <div class="price">
+                    <input type="radio" name="plan" id="diamond" value="diamond">
+                    <label for="diamond">$999</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+            
+            <div class="testimonial">
+                <h4>Couples</h4>
+                <p>"Always amazing to work with him"</p>
+                <div class="stars">
+                     <span>five stars</span></div>
+            </div>
+
+            <div class="testimonial">
+                <h4>Individuals</h4>
+                <p>"My birthday shot went amazing and very beautiful results."</p>
+                <div class="stars">
+                     <span>five stars</span></div>
+            </div>
+        </section>
+
+        <!-- Booking Form -->
+        <section class="booking">
+            <h2>Book Your Session</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label>Select Plan:</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="booking-plan" value="economy">
+                            <span class="checkmark"></span>
+                            Economy ($599)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="booking-plan" value="premium">
+                            <span class="checkmark"></span>
+                            Premium ($1199)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="booking-plan" value="diamond">
+                            <span class="checkmark"></span>
+                            Diamond ($999)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms">
+                        <span class="checkmark-box"></span>
+                        I agree to the terms and conditions
+                    </label>
+                </div>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p> RAW MATIC Photography. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
