@@ -1,0 +1,7 @@
+CAT 2
+
+1. Pricing plans are stored as a JS array and rendered with forEach() into the page.
+2. Wishlist items can be added and removed using createElement(), appendChild(), and remove().
+3. The booking form validates inputs on submit and shows feedback messages using textContent.
+4. The selected plan is saved with localStorage so it stays selected after a reload.
+5. Clicking the banner toggles a hidden caption using classList.toggle().
