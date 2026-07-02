@@ -42,3 +42,36 @@ pricingPlans.forEach((plan) => {
 
   pricingContainer.appendChild(planDiv);
 });
+
+// Feature 2: Wishlist add & remove
+const wishlistInput = document.getElementById("wishlist-input");
+const wishlistAddBtn = document.getElementById("wishlist-add-btn");
+const wishlistList = document.getElementById("wishlist-list");
+
+wishlistAddBtn.addEventListener("click", () => {
+  const text = wishlistInput.value.trim();
+
+  if (text === "") {
+    return; // don't add empty entries
+  }
+
+  // Create the new list item
+  const li = document.createElement("li");
+  li.textContent = text;
+
+  // Create its remove button
+  const removeBtn = document.createElement("button");
+  removeBtn.textContent = "Remove";
+  removeBtn.className = "remove-btn";
+
+  removeBtn.addEventListener("click", () => {
+    li.remove();
+  });
+
+  // Put the remove button inside the list item, then add the item to the list
+  li.appendChild(removeBtn);
+  wishlistList.appendChild(li);
+
+  // Clear the input box for the next entry
+  wishlistInput.value = "";
+});

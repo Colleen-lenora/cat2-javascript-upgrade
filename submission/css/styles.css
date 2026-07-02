@@ -404,7 +404,7 @@ footer p {
     align-items: center;
     gap: 10px;
     font-size: 0.9rem;
-    color: #ffffff;
+    color: #e0d55aa5;
     cursor: pointer;
 }
  
@@ -412,6 +412,64 @@ footer p {
     accent-color: #c9910d;
     width: 16px;
     height: 16px;
+}
+
+.wishlist {
+    text-align: center;
+    background-color: #9e4cd9;
+    color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 8px;
+     max-width: 500px;
+    margin: 0 auto;
+}
+
+.wishlist input {
+    padding: 8px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+#wishlist-add-btn {
+    background-color: #d4af37;
+    color: #4B0082;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#wishlist-add-btn:hover {
+    background-color: #c19b2e;
+}
+
+.wishlist ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wishlist li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.remove-btn {
+    background: #d6ae36;
+    color:white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
 }
  
 
