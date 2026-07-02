@@ -120,3 +120,21 @@ bookingForm.addEventListener("submit", (event) => {
 
   bookingForm.reset(); // clear the form after successful submit
 });
+// Feature 4: Remember selected plan using localStorage
+const planRadios = document.querySelectorAll('input[name="booking-plan"]');
+
+// On page load: check if a plan was saved, and re-select it
+const savedPlan = localStorage.getItem("selectedPlan");
+if (savedPlan) {
+  const matchingRadio = document.querySelector(`input[name="booking-plan"][value="${savedPlan}"]`);
+  if (matchingRadio) {
+    matchingRadio.checked = true;
+  }
+}
+
+// Whenever the user picks a plan, save it
+planRadios.forEach((radio) => {
+  radio.addEventListener("change", () => {
+    localStorage.setItem("selectedPlan", radio.value);
+  });
+});
