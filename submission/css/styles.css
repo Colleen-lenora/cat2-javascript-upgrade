@@ -42,12 +42,17 @@ header h1 {
     font-size: 1.1rem;
     letter-spacing: 2px;
 }
+.welcome-text {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+   }
 
 .hero {
       display: grid;
     grid-template-columns: 280px 1fr;  /* Image on left, text on right */
     align-items: center;       /* Vertically aligns the text at the top beside the image */
-    justify-content: center;
+    justify-content: space-between;
     gap: 100px;                 /* Space between image and text */
     padding: 20px;
       
@@ -471,6 +476,18 @@ footer p {
     border-radius: 4px;
     cursor: pointer;
 }
+.hidden {
+       display: none;
+   }
+
+   #banner-img {
+       cursor: pointer;
+   }
+
+   #banner-caption {
+       margin-top: 10px;
+       font-style: italic;
+   }
  
 
 

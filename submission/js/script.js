@@ -138,3 +138,10 @@ planRadios.forEach((radio) => {
     localStorage.setItem("selectedPlan", radio.value);
   });
 });
+// Feature 5: Click-to-reveal banner caption
+const bannerImg = document.getElementById("banner-img");
+const bannerCaption = document.getElementById("banner-caption");
+
+bannerImg.addEventListener("click", () => {
+  bannerCaption.classList.toggle("hidden");
+});
