@@ -75,3 +75,48 @@ wishlistAddBtn.addEventListener("click", () => {
   // Clear the input box for the next entry
   wishlistInput.value = "";
 });
+
+// Feature 3: Booking form validation
+const bookingForm = document.getElementById("booking-form");
+const bookingFeedback = document.getElementById("booking-feedback");
+
+bookingForm.addEventListener("submit", (event) => {
+  event.preventDefault(); // stop the page from reloading
+
+  const nameValue = document.getElementById("name").value.trim();
+  const emailValue = document.getElementById("email").value.trim();
+  const phoneValue = document.getElementById("phone").value.trim();
+  const planSelected = document.querySelector('input[name="booking-plan"]:checked');
+  const termsChecked = document.getElementById("terms").checked;
+
+  // Basic validation checks
+  if (nameValue === "") {
+    bookingFeedback.textContent = "Please enter your full name.";
+    bookingFeedback.style.color = "red";
+    return;
+  }
+
+  if (emailValue === "" || !emailValue.includes("@")) {
+    bookingFeedback.textContent = "Please enter a valid email address.";
+    bookingFeedback.style.color = "red";
+    return;
+  }
+
+  if (!planSelected) {
+    bookingFeedback.textContent = "Please select a plan before booking.";
+    bookingFeedback.style.color = "red";
+    return;
+  }
+
+  if (!termsChecked) {
+    bookingFeedback.textContent = "You must agree to the terms and conditions.";
+    bookingFeedback.style.color = "red";
+    return;
+  }
+
+  // If everything passed
+  bookingFeedback.textContent = `Thanks, ${nameValue}! Your ${planSelected.value} session request has been received. We'll contact you at ${emailValue}.`;
+  bookingFeedback.style.color = "green";
+
+  bookingForm.reset(); // clear the form after successful submit
+});
